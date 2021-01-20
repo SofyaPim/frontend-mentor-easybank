@@ -6,5 +6,5 @@
 ## На чистом JS написано Burger-menu и изменение цвета иконок и ссылок в footer.
 
 ###  ( проект готов для сборки на  webpack)
-#
+# результат можно увидеть на https://sofyapim.github.io/frontend-mentor-easybank/
 
