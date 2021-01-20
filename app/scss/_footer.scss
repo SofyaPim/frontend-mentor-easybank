@@ -1,0 +1,86 @@
+.footer {
+    background-color: $darkBlue;
+    color: $lightGrayishBlue;
+    padding: 2.5rem;
+    text-align: center;
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "logo links1 links2 cta"
+            "social links1 links2 cta";
+        justify-items: start;
+    }
+    a {
+        color: $grayishBlue;
+        line-height: 2;
+    }
+    &__logo {
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+        }
+        display: inline-block;
+        @include breakpoint-up(large) {
+            grid-area: logo;
+            align-items: start;
+            text-align: start;
+        }
+    }
+    &__social {
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+        }
+        a:not(:last-child) {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        @include breakpoint-up(large) {
+            grid-area: social;
+            align-self: end;
+        }
+    }
+    &__links {
+        font-size: 0.9rem;
+        @include df-fdc;
+        @include breakpoint-up(large) {
+            align-items: start;
+        }
+        &.col1 {
+            @include breakpoint-up(large) {
+                grid-area: links1;
+                margin-left: 7.8rem;
+            }
+        }
+        &.col2 {
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+            }
+            @include breakpoint-up(large) {
+                grid-area: links2;
+                margin-left: 6rem;
+            }
+        }
+    }
+    &__cta {
+        font-size: 0.9rem;
+        @include breakpoint-up(large) {
+            grid-area: cta;
+            justify-self: end;
+            text-align: right;
+        }
+        .button:hover {
+            filter: saturate(150%);
+        }
+        a.button {
+            color: $White;
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+            }
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.filter {
+    filter: invert(46%) sepia(58%) saturate(1765%) hue-rotate(91deg) brightness(94%) contrast(87%);
+}

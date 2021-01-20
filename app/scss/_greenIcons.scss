@@ -1,0 +1,69 @@
+.greenIcons {
+    text-align: start;
+    padding: 6.625rem;
+    background-color: $lightGrayishBlue;
+
+    &__p {
+        width: 39.75rem;
+
+    }
+
+    &__container {
+      @include df-jc-sb;
+        flex-wrap: wrap;
+        margin-top: 4.4rem;
+
+
+        &__card {
+
+          @include df-js-fs;
+            flex-direction: column;
+            
+            width: 17rem;
+            max-height: 17.25rem;
+            &:not(:last-child){
+                   margin-bottom: 2.25rem;
+            }
+         
+
+            img {
+                width: 4.25rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h3 {
+                margin-bottom: 1.125rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .greenIcons {
+        text-align: center;
+        padding: 2.25rem;
+
+        &__p {
+            width: auto;
+        }
+
+        &__container {
+
+            &__card {
+              @include df-js-c;
+                align-items: center;
+                width: auto;
+                max-height: 17.25rem;
+
+                img {
+                    width: 4.25rem;
+                    margin-bottom: 1.625rem;
+                }
+
+                h3 {
+                    margin-bottom: 1.625rem;
+                }
+            }
+        }
+    }
+}

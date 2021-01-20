@@ -1,0 +1,34 @@
+@media (min-width:64em){
+
+}
+
+$breakpoints-up:("medium":"40em","large":"64em","xlarge":"87.5em");
+$breakpoints-down:("small":"39.9375em","medium":"63.9375em","large":"87.4375em");
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size )){
+        @content;
+    }
+}
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size )){
+        @content;
+    }
+}
+
+@mixin df-js-c {
+    display: flex;
+    justify-content: center;
+}
+@mixin df-js-fs {
+    display: flex;
+    justify-content: flex-start;
+}
+@mixin df-jc-sb {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin df-fdc {
+    display: flex;
+    flex-direction: column;
+    
+}

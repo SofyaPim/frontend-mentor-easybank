@@ -1,0 +1,82 @@
+.articles {
+    padding: 6.625rem;
+    background-color: $VeryLightGray;
+    h2 {
+        margin-top: 0.875rem;
+        margin-bottom: 3.3rem;
+        text-align: start;
+    }
+    &__container {
+        @include df-jc-sb;
+        flex-wrap: wrap;
+        flex-direction: row;
+        &__card {
+            background-color: $White;
+            @include df-js-fs;
+            flex-direction: column;
+            width: 17rem;
+            box-shadow: 2px 2px 5px $grayishBlue;
+            margin-bottom: 2.25rem;
+            img {
+                width: 100%;
+                height: 40%;
+                margin-bottom: .23rem;
+            }
+            h3 {
+                &:hover {
+                    color: $limeGreen;
+                    cursor: pointer;
+                }
+                font-weight: 300;
+                margin-bottom: 1.125rem;
+            }
+            .card__info {
+                margin-top: 0rem;
+                padding: 1.375rem;
+                text-align: justify;
+                .caption {
+                    font-size: .9rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .articles {
+        padding: 2.25rem;
+        h2 {
+            text-align: center;
+            margin-top: 5.25rem;
+            margin-bottom: 1.825rem;
+        }
+        &__container {
+            @include df-jc-sb;
+            flex-wrap: wrap;
+            flex-direction: column;
+            &__card {
+                width: 100%;
+                height: auto;
+                &:not(:last-child) {
+                    margin-bottom: 2.25rem;
+                }
+                img {
+                    width: 100%;
+                    height: 50%;
+                    margin-bottom: 0;
+                }
+                h3 {
+                    margin-bottom: 1.125rem;
+                }
+                .card__info {
+                    padding: 1rem;
+                    .caption {
+                        font-size: .7rem;
+                        margin-bottom: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
