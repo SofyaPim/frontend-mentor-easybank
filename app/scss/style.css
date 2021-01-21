@@ -87,6 +87,7 @@
   width: 90vw;
   height: 25rem;
   top: 6rem;
+  left: 3.5vw;
   -webkit-box-shadow: 1px 97px 41px 83px rgba(34, 60, 80, 0.2);
   box-shadow: 1px 97px 41px 83px rgba(34, 60, 80, 0.2);
   border-radius: 5px;
@@ -577,7 +578,7 @@ b {
   .footer {
     display: -ms-grid;
     display: grid;
-   
+    
         grid-template-columns: repeat(3, 1fr) 2fr;
    
         grid-template-rows: repeat(2, 1fr);
