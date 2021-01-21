@@ -578,9 +578,9 @@ b {
   .footer {
     display: -ms-grid;
     display: grid;
-    
+  
         grid-template-columns: repeat(3, 1fr) 2fr;
-   
+
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: "logo links1 links2 cta" "social links1 links2 cta";
     justify-items: start;
@@ -701,7 +701,7 @@ b {
   }
 }
 
-.filter {
+.filter:hover {
   -webkit-filter: invert(46%) sepia(58%) saturate(1765%) hue-rotate(91deg) brightness(94%) contrast(87%);
           filter: invert(46%) sepia(58%) saturate(1765%) hue-rotate(91deg) brightness(94%) contrast(87%);
 }

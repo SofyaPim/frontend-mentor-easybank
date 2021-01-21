@@ -82,5 +82,8 @@
     }
 }
 .filter {
-    filter: invert(46%) sepia(58%) saturate(1765%) hue-rotate(91deg) brightness(94%) contrast(87%);
+    &:hover{
+        filter: invert(46%) sepia(58%) saturate(1765%) hue-rotate(91deg) brightness(94%) contrast(87%);
+    }
+    
 }
